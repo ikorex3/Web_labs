@@ -1,0 +1,72 @@
+<%- include('partials/head') %>
+    <h3>Items in cart</h3>
+    <table>
+        <thead>
+            <th>Details about prompts</th>
+            <th>Price</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <picture>
+                        <source srcset="Pictures\image 2 large.png" media="(min-width: 600px)">
+                        <img src="Pictures\image 2.png" alt="Cozy Autumn Lounge">
+                    </picture>
+                    <h3>Cozy Autumn Lounge</h3>
+                    <span role="img" aria-label="Rating">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
+                </td>
+                <td>$7.99</td>
+                <td>
+                    <button aria-label="Remove Cozy Autumn Lounge">Remove</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <picture>
+                        <source srcset="Pictures\image 4 large.png" media="(min-width: 600px)">
+                        <img src="Pictures\image 4.png" alt="Twilight Muse">
+                    </picture>
+
+                    <h3>Twilight Muse</h3>
+                    <span role="img" aria-label="Rating">&#9733;&#9733;&#9733;&#9734;&#9734;</span>
+                </td>
+                <td>$4.49</td>
+                <td>
+                    <button aria-label="Remove Twilight Muse">Remove</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <aside aria-labelledby="order-summary">
+        <h3 id="order-summary">Order Summary</h3>
+        <dl>
+            <dt>Subtotal</dt>
+            <dd>$12.48</dd>
+            <dt>Discount</dt>
+            <dd>$0</dd>
+        </dl>
+        <div>
+            <label for="promocode-input">Promocode</label>
+            <input placeholder="Enter Promocode">
+        </div>
+        <button>Secure Payment</button>
+    </aside>
+    <section aria-labelledby="why_choose">
+        <h2 id="why_choose">Why you should choose PromptForge</h2>
+        <picture>
+            <source srcset="Pictures\user-protection large.png" media="(min-width: 600px)">
+            <img src="Pictures\user-protection 1.png" alt="Verified Prompts">
+        </picture>
+        <p>Verified Prompts</p>
+        <picture>
+            <source srcset="Pictures\security 1 large.png" media="(min-width: 600px)">
+            <img src="Pictures\security 1.png" alt="Security">
+        </picture>
+        <p>Secure Payments</p>
+        <picture>
+            <source srcset="Pictures\star-rating large.png" media="(min-width: 600px)">
+            <img src="Pictures\star-rating 1.png" alt="Trusted">
+        </picture>
+        <p>Trusted by creators</p>
+    </section>
+    <%- include('partials/footer') %>

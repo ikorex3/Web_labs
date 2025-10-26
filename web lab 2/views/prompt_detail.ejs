@@ -1,0 +1,89 @@
+<%- include('partials/head') %>
+    <article itemscope itemtype="https://schema.org/Product" aria-labelledby="prompt-title">
+        <picture>
+            <source srcset="Pictures\image 2 large.png" media="(min-width: 600px)">
+            <img src="Pictures\image 2.png" alt="Cozy Autumn Lounge" itemprop="image">
+        </picture>
+        <h2 id="prompt-title" itemprop="name">Cozy Autumn Lounge</h2>
+        <div itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
+            <p>&#9733;&#9733;&#9733;&#9733;&#9734;</p>
+            <meta itemprop="ratingValue" content="4.3">
+            <meta itemprop="reviewCount" content="24">
+        </div>
+        <div itemprop="offers" itemscope itemtype="https://schema.org/AggregateOffer">
+            <p class="price">$<span itemprop="price">7.99</span></p>
+            <meta itemprop="priceCurrency" content="USD">
+            <link itemprop="availability" href="https://schema.org/InStock">
+            <button aria-label="Add Lounge to Cart"><a href="/payment">Add to Cart</a></button>
+        </div>
+        <section aria-labelledby="description">
+            <h3 id="description">Prompt Description</h3>
+            <p itemprop="description">This prompt is engineered to generate a cinematic, photorealistic image of a warm,
+                inviting lounge
+                area. It perfectly balances indoor comfort with the beauty of the outdoors. A spacious,
+                high-ceilinged room with massive, industrial-style window panels overlooking a foggy, vibrant autumn
+                forest.</p>
+        </section>
+        <section aria-labelledby="reviews">
+            <h3 id="reviews">User reviews</h3>
+            <div itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
+                <p>4.3 &#9733;&#9733;&#9733;&#9733;&#9734;</p>
+                <meta itemprop="ratingValue" content="4.3">
+                <meta itemprop="ratingCount" content="3">
+            </div>
+            <article itemprop="review" itemscope itemtype="http://schema.org/Review" aria-label="user-review">
+                <div itemprop="reviewRating" itemscope itemtype="http://schema.org/Rating">
+                    <meta itemprop="ratingValue" content="4">
+                </div>
+                <p>&#9733;&#9733;&#9733;&#9733;&#9734;</p>
+                <p itemprop="reviewBody">High quality, easy to use. The only reason for 4 stars is that I had to run it
+                    twice to get the
+                    perfect coffee cup detail.</p>
+            </article>
+            <article itemprop="review" itemscope itemtype="http://schema.org/Review" aria-label="user-review">
+                <div itemprop="reviewRating" itemscope itemtype="http://schema.org/Rating">
+                    <meta itemprop="ratingValue" content="5">
+                </div>
+                <p>&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+                <p itemprop="reviewBody">My new favorite! This is exactly the type of detailed prompt I look for. The
+                    interior design
+                    elements, especially the leather chairs and throw blanket, are beautifully rendered. </p>
+            </article>
+            <article itemprop="review" itemscope itemtype="http://schema.org/Review" aria-label="user-review">
+                <div itemprop="reviewRating" itemscope itemtype="http://schema.org/Rating">
+                    <meta itemprop="ratingValue" content="5">
+                </div>
+                <p>&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+                <p itemprop="reviewBody">Amazing atmosphere! I used this prompt for a background in a short story, and
+                    the details on the
+                    fireplace and lighting were incredible. It worked perfectly right out of the box. Highly
+                    recommend for any cozy scene</p>
+            </article>
+        </section>
+    </article>
+    <section aria-labelledby="popular">
+        <h2 id="popular">Most popular prompts this month</h2>
+        <p><a href="/prompt">See more</a></p>
+        <article itemscope itemtype="https://schema.org/Product">
+            <a href="/prompt"><img src="Pictures\image 6.png" itemprop="image"></a>
+            <p itemprop="offers" itemscope itemtype="http://schema.org/Offer">$<span itemprop="price">2.49</span></p>
+            <meta itemprop="priceCurrency" content="USD">
+            <p><small>#cityscape #future</small></p>
+            <p>&#9733;&#9733;&#9733;&#9733;&#9734;</p>
+        </article>
+        <article itemscope itemtype="https://schema.org/Product">
+            <a href="/prompt"><img src="Pictures\image 4.png" itemprop="image"></a>
+            <p itemprop="offers" itemscope itemtype="http://schema.org/Offer">$<span itemprop="price">4.49</span></p>
+            <meta itemprop="priceCurrency" content="USD">
+            <p><small>#portrait #sculpture</small></p>
+            <p>&#9733;&#9733;&#9733;&#9733;&#9734;</p>
+        </article>
+        <article itemscope itemtype="https://schema.org/Product">
+            <a href="/prompt"><img src="Pictures\image 3.png" itemprop="image"></a>
+            <p itemprop="offers" itemscope itemtype="http://schema.org/Offer">$<span itemprop="price">12.99</span></p>
+            <meta itemprop="priceCurrency" content="USD">
+            <p><small>#animals #cartoon</small></p>
+            <p>&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+        </article>
+    </section>
+    <%- include('partials/footer') %>

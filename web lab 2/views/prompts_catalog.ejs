@@ -1,0 +1,153 @@
+<%- include('partials/head') %>
+    <section class="mobile">
+        <form role="search" method="GET">
+            <input type="search" placeholder="Search by #" aria-label="Search by tag">
+        </form>
+        <button type="button" class="filter">Filter</button>
+        <p>Sort by relevant</p>
+        <form id="filters-panel" class="filters" method="GET">
+            <fieldset>
+                <legend>AI Model</legend>
+                <label><input type="radio" name="ai_model"> Any</label>
+                <label><input type="radio" name="ai_model"> Chat Gpt</label>
+                <label><input type="radio" name="ai_model"> Jasper</label>
+                <label><input type="radio" name="ai_model"> Leonardo</label>
+                <label><input type="radio" name="ai_model_"> Gemini</label>
+                <label><input type="radio" name="ai_model"> QuillBot</label>
+                <label><input type="radio" name="ai_model"> DALL-E</label>
+                <label><input type="radio" name="ai_model"> Midjourney</label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Type</legend>
+                <label><input type="radio" name="type"> Any</label>
+                <label><input type="radio" name="type"> Text</label>
+                <label><input type="radio" name="type"> Image</label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Price range</legend>
+                <label><input type="radio" name="price"> Any</label>
+                <label><input type="radio" name="price"> Under $5</label>
+                <label><input type="radio" name="price"> $5-$10</label>
+                <label><input type="radio" name="price"> $10-$20</label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Rating</legend>
+                <label><input type="radio" name="rating"> Any</label>
+                <label><input type="radio" name="rating"> 5&#9733;</label>
+                <label><input type="radio" name="rating"> 4&#9733;</label>
+                <label><input type="radio" name="rating"> 3&#9733; or less</label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Novelty</legend>
+                <label><input type="radio" name="novelty"> Any</label>
+                <label><input type="radio" name="novelty"> Newest</label>
+                <label><input type="radio" name="novelty"> Oldest</label>
+                <label><input type="radio" name="novelty"> This week</label>
+                <label><input type="radio" name="novelty"> This month</label>
+            </fieldset>
+        </form>
+    </section>
+    <section class="desktop">
+        <form id="filters">
+            <label for="ai-model">AI Model</label>
+            <select id="ai-model" name="ai-model">
+                <option value="" disabled selected>Select</option>
+                <option>Any</option>
+                <option>ChatGPT</option>
+                <option>Jasper</option>
+                <option>Leonardo</option>
+                <option>Gemini</option>
+                <option>QuillBot</option>
+                <option>DALL-E</option>
+                <option>Midjourney</option>
+            </select>
+            <label for="type">Type</label>
+            <select id="type" name="type">
+                <option value="" disabled selected>Select</option>
+                <option>Any</option>
+                <option>Text</option>
+                <option>Image</option>
+            </select>
+            <label for="price-range">Price range</label>
+            <select id="price-range" name="price-range">
+                <option value="" disabled selected>Select</option>
+                <option>Any</option>
+                <option>Under $5</option>
+                <option>$5-$10</option>
+                <option>$10-$20</option>
+            </select>
+            <label for="rating">Rating</label>
+            <select id="rating" name="rating">
+                <option value="" disabled selected>Select</option>
+                <option>Any</option>
+                <option>5&#9733;</option>
+                <option>4&#9733;</option>
+                <option>3&#9733; or less</option>
+            </select>
+            <label for="novelty">Novelty</label>
+            <select id="novelty" name="novelty">
+                <option value="" disabled selected>Select</option>
+                <option>Any</option>
+                <option>Newest</option>
+                <option>Oldest</option>
+                <option>This week</option>
+                <option>This month</option>
+            </select>
+        </form>
+    </section>
+    <input type="search" placeholder="Search by #" aria-label="Search by tag">
+    </section>
+    <section aria-labelledby="prompt-results">
+        <h3 id="prompt-results">Showing 5 Prompts</h3>
+        <article>
+            <picture>
+                <source srcset="Pictures\image 2 large.png" media="(min-width: 600px)">
+                <a href="/prompt"><img src="Pictures\image 2.png" alt="Cozy Autumn Lounge"></a>
+            </picture>
+
+            <p>$7.99</p>
+            <p><small>#design #furniture</small></p>
+            <p>&#9733;&#9733;&#9733;&#9733;&#9734;</p>
+        </article>
+        <article>
+            <picture>
+                <source srcset="Pictures\image 4 large.png" media="(min-width: 600px)">
+                <a href="/prompt"><img src="Pictures\image 4.png" alt="Twilight Muse"></a>
+            </picture>
+            <p>$4.49</p>
+            <p><small>#portrait #sculpture</small></p>
+            <p>&#9733;&#9733;&#9733;&#9733;&#9734;</p>
+        </article>
+        <article>
+            <picture>
+                <source srcset="Pictures\image 3 large.png" media="(min-width: 600px)">
+                <a href="/prompt"><img src="Pictures\image 3.png" alt="Plumpy Cat"></a>
+            </picture>
+            <p>$12.99</p>
+            <p><small>#animals #cartoon</small></p>
+            <p>&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+        </article>
+        <article>
+            <picture>
+                <source srcset="Pictures\image 5 large.png" media="(min-width: 600px)">
+                <a href="/prompt"><img src="Pictures\image 5.png" alt="Dark Forest"></a>
+            </picture>
+            <p>$6.49</p>
+            <p><small>#nature #forest</small></p>
+            <p>&#9733;&#9733;&#9733;&#9733;&#9734;</p>
+        </article>
+        <article>
+            <picture>
+                <source srcset="Pictures\image 6 large.png" media="(min-width: 600px)">
+                <a href="/prompt"><img src="Pictures\image 6.png" alt="Futuristic City"></a>
+            </picture>
+            <p>$2.49</p>
+            <p><small>#cityscape #future</small></p>
+            <p>&#9733;&#9733;&#9733;&#9733;&#9734;</p>
+        </article>
+    </section>
+    <%- include('partials/footer') %>
