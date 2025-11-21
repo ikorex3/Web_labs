@@ -1,0 +1,9 @@
+@use 'variables' as var;
+
+@function rem($pixels) {
+    @return calc($pixels / 16) * 1rem; 
+}
+
+@function color-mix($color1, $color2, $weight: 50%) {
+    @return mix($color1, $color2, $weight);
+}
