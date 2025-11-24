@@ -1,0 +1,101 @@
+@use '../abstracts/variables' as var;
+@use '../abstracts/mixins' as mix;
+@use '../abstracts/functions' as fn;
+@use '../abstracts/breakpoints' as b;
+
+.header {
+    background-color: var.$color-overlay-1;
+    @include mix.container(var.$layout-max-width);
+    border-radius: fn.rem(15);
+    margin-top: fn.rem(30);
+    margin-bottom: fn.rem(30);
+    padding: fn.rem(15) 0;
+    
+    .header__wrapper {
+    @include mix.flex-group(space-between, baseline);
+    gap: fn.rem(30);
+    @include mix.flex-group(space-between, baseline);
+
+}
+    
+    &__logo {
+        margin-left: fn.rem(10);
+        
+        a {
+            font-size: fn.rem(var.$font-size-name);
+            font-weight: 700;
+            color: var.$color-text-primary;
+            line-height: normal;
+        }
+    }
+    
+    .desktop {
+        display: none;
+        
+        @include b.media-up(desktop) {
+            display: flex;
+            @include mix.flex-group(flex-end, center); 
+            gap: fn.rem(30);
+            flex-grow: 1; 
+        }
+    }
+    &__search-form {
+        flex-grow: 0.6; 
+        min-width: fn.rem(250);
+    }
+    &__search-input {
+        width: 100%;
+        padding: fn.rem(8) fn.rem(15);
+        border: 1px solid var.$color-text-primary; 
+        border-radius: fn.rem(5);
+        background-color: var.$color-text-primary;
+        color: var.$color-text-primary;
+        font-size: fn.rem(var.$font-size-navigation);
+        &:focus {
+            color: var.$color-bg;
+            border-color: var.$color-button-primary;
+        }
+    }
+    .phone {
+        @include mix.flex-group(space-around, center);
+        gap: fn.rem(15);
+        
+        @include b.media-up(desktop) {
+            display: none;
+        }
+    }
+    
+    &__nav {
+        flex-grow: 1;
+        margin-right: fn.rem(30);
+        
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            
+            @include mix.flex-group(space-around, center); 
+            gap: 0;
+        }
+    }
+    
+    &__link {
+        color: var.$color-text-primary;
+        font-size: fn.rem(var.$font-size-navigation);
+        font-weight: 500;
+        
+        &:hover {
+            color: var.$color-text-primary;
+            opacity: 1; 
+        }
+    }
+    &__checkout-btn {
+    @extend .button--primary !optional; 
+}
+
+    &__menu-btn, &__search-icon {
+        @extend .button--icon !optional;
+        background-color: var.$color-overlay-1;
+        border-radius: fn.rem(0);
+    }
+}

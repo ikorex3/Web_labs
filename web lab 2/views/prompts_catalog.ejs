@@ -1,155 +1,266 @@
 <%- include('partials/head') %>
 <main>
-    <section class="mobile">
-        <form role="search" method="GET">
-            <input type="search" placeholder="Search by #" aria-label="Search by tag">
-        </form>
-        <button type="button" class="filter">Filter</button>
-        <p>Sort by relevant</p>
-        <form id="filters-panel" class="filters" method="GET">
-            <fieldset>
-                <legend>AI Model</legend>
-                <label><input type="radio" name="ai_model"> Any</label>
-                <label><input type="radio" name="ai_model"> Chat Gpt</label>
-                <label><input type="radio" name="ai_model"> Jasper</label>
-                <label><input type="radio" name="ai_model"> Leonardo</label>
-                <label><input type="radio" name="ai_model_"> Gemini</label>
-                <label><input type="radio" name="ai_model"> QuillBot</label>
-                <label><input type="radio" name="ai_model"> DALL-E</label>
-                <label><input type="radio" name="ai_model"> Midjourney</label>
-            </fieldset>
+    <div class="container">
+        <section class="catalog-filter catalog-filter--desktop">
+            <div class="catalog-filter__wrapper">
+                <form id="filters" class="catalog-filter__form" aria-label="Filter prompts">
+                <div class="catalog-filter__field">
+                    <label for="ai-model" class="catalog-filter__label">AI Model</label>
+                    <select id="ai-model" name="ai-model" class="catalog-filter__select">
+                        <option value="" disabled selected>Select</option>
+                        <option>Any</option>
+                        <option>ChatGPT</option>
+                        <option>Jasper</option>
+                        <option>Leonardo</option>
+                        <option>Gemini</option>
+                        <option>QuillBot</option>
+                        <option>DALL-E</option>
+                        <option>Midjourney</option>
+                    </select>
+                </div>
 
-            <fieldset>
-                <legend>Type</legend>
-                <label><input type="radio" name="type"> Any</label>
-                <label><input type="radio" name="type"> Text</label>
-                <label><input type="radio" name="type"> Image</label>
-            </fieldset>
+                <div class="catalog-filter__field">
+                    <label for="type" class="catalog-filter__label">Type</label>
+                    <select id="type" name="type" class="catalog-filter__select">
+                        <option value="" disabled selected>Select</option>
+                        <option>Any</option>
+                        <option>Text</option>
+                        <option>Image</option>
+                    </select>
+                </div>
 
-            <fieldset>
-                <legend>Price range</legend>
-                <label><input type="radio" name="price"> Any</label>
-                <label><input type="radio" name="price"> Under $5</label>
-                <label><input type="radio" name="price"> $5-$10</label>
-                <label><input type="radio" name="price"> $10-$20</label>
-            </fieldset>
+                <div class="catalog-filter__field">
+                    <label for="price-range" class="catalog-filter__label">Price range</label>
+                    <select id="price-range" name="price-range" class="catalog-filter__select">
+                        <option value="" disabled selected>Select</option>
+                        <option>Any</option>
+                        <option>Under $5</option>
+                        <option>$5-$10</option>
+                        <option>$10-$20</option>
+                    </select>
+                </div>
 
-            <fieldset>
-                <legend>Rating</legend>
-                <label><input type="radio" name="rating"> Any</label>
-                <label><input type="radio" name="rating"> 5&#9733;</label>
-                <label><input type="radio" name="rating"> 4&#9733;</label>
-                <label><input type="radio" name="rating"> 3&#9733; or less</label>
-            </fieldset>
+                <div class="catalog-filter__field">
+                    <label for="rating" class="catalog-filter__label">Rating</label>
+                    <select id="rating" name="rating" class="catalog-filter__select">
+                        <option value="" disabled selected>Select</option>
+                        <option>Any</option>
+                        <option>5&#9733;</option>
+                        <option>4&#9733;</option>
+                        <option>3&#9733; or less</option>
+                    </select>
+                </div>
 
-            <fieldset>
-                <legend>Novelty</legend>
-                <label><input type="radio" name="novelty"> Any</label>
-                <label><input type="radio" name="novelty"> Newest</label>
-                <label><input type="radio" name="novelty"> Oldest</label>
-                <label><input type="radio" name="novelty"> This week</label>
-                <label><input type="radio" name="novelty"> This month</label>
-            </fieldset>
-        </form>
-    </section>
-    <section class="desktop">
-        <form id="filters">
-            <label for="ai-model">AI Model</label>
-            <select id="ai-model" name="ai-model">
-                <option value="" disabled selected>Select</option>
-                <option>Any</option>
-                <option>ChatGPT</option>
-                <option>Jasper</option>
-                <option>Leonardo</option>
-                <option>Gemini</option>
-                <option>QuillBot</option>
-                <option>DALL-E</option>
-                <option>Midjourney</option>
-            </select>
-            <label for="type">Type</label>
-            <select id="type" name="type">
-                <option value="" disabled selected>Select</option>
-                <option>Any</option>
-                <option>Text</option>
-                <option>Image</option>
-            </select>
-            <label for="price-range">Price range</label>
-            <select id="price-range" name="price-range">
-                <option value="" disabled selected>Select</option>
-                <option>Any</option>
-                <option>Under $5</option>
-                <option>$5-$10</option>
-                <option>$10-$20</option>
-            </select>
-            <label for="rating">Rating</label>
-            <select id="rating" name="rating">
-                <option value="" disabled selected>Select</option>
-                <option>Any</option>
-                <option>5&#9733;</option>
-                <option>4&#9733;</option>
-                <option>3&#9733; or less</option>
-            </select>
-            <label for="novelty">Novelty</label>
-            <select id="novelty" name="novelty">
-                <option value="" disabled selected>Select</option>
-                <option>Any</option>
-                <option>Newest</option>
-                <option>Oldest</option>
-                <option>This week</option>
-                <option>This month</option>
-            </select>
-        </form>
-    </section>
-    <input type="search" placeholder="Search by #" aria-label="Search by tag">
-    </section>
-    <section aria-labelledby="prompt-results">
-        <h3 id="prompt-results">Showing 5 Prompts</h3>
-        <article>
-            <picture>
-                <source srcset="Pictures\image 2 large.png" media="(min-width: 600px)">
-                <a href="/prompt"><img src="Pictures\image 2.png" alt="Cozy Autumn Lounge"></a>
-            </picture>
+                <div class="catalog-filter__field">
+                    <label for="novelty" class="catalog-filter__label">Novelty</label>
+                    <select id="novelty" name="novelty" class="catalog-filter__select">
+                        <option value="" disabled selected>Select</option>
+                        <option>Any</option>
+                        <option>Newest</option>
+                        <option>Oldest</option>
+                        <option>This week</option>
+                        <option>This month</option>
+                    </select>
+                </div>
 
-            <p>$7.99</p>
-            <p><small>#design #furniture</small></p>
-            <p>&#9733;&#9733;&#9733;&#9733;&#9734;</p>
-        </article>
-        <article>
-            <picture>
-                <source srcset="Pictures\image 4 large.png" media="(min-width: 600px)">
-                <a href="/prompt"><img src="Pictures\image 4.png" alt="Twilight Muse"></a>
-            </picture>
-            <p>$4.49</p>
-            <p><small>#portrait #sculpture</small></p>
-            <p>&#9733;&#9733;&#9733;&#9733;&#9734;</p>
-        </article>
-        <article>
-            <picture>
-                <source srcset="Pictures\image 3 large.png" media="(min-width: 600px)">
-                <a href="/prompt"><img src="Pictures\image 3.png" alt="Plumpy Cat"></a>
-            </picture>
-            <p>$12.99</p>
-            <p><small>#animals #cartoon</small></p>
-            <p>&#9733;&#9733;&#9733;&#9733;&#9733;</p>
-        </article>
-        <article>
-            <picture>
-                <source srcset="Pictures\image 5 large.png" media="(min-width: 600px)">
-                <a href="/prompt"><img src="Pictures\image 5.png" alt="Dark Forest"></a>
-            </picture>
-            <p>$6.49</p>
-            <p><small>#nature #forest</small></p>
-            <p>&#9733;&#9733;&#9733;&#9733;&#9734;</p>
-        </article>
-        <article>
-            <picture>
-                <source srcset="Pictures\image 6 large.png" media="(min-width: 600px)">
-                <a href="/prompt"><img src="Pictures\image 6.png" alt="Futuristic City"></a>
-            </picture>
-            <p>$2.49</p>
-            <p><small>#cityscape #future</small></p>
-            <p>&#9733;&#9733;&#9733;&#9733;&#9734;</p>
-        </article>
-    </section>
+                <div class="catalog-filter__search">
+                    <label for="catalog-search" class="catalog-filter__label">Search by #</label>
+                    <div class="catalog-filter__search-field">
+                        <input type="search" id="catalog-search" placeholder="Search by #" aria-label="Search by tag"
+                            class="catalog-filter__search-input">
+                    </div>
+                </div>
+                </form>
+            </div>
+        </section>
+    </div>
+    <div class="container">
+        <section class="catalog-results" aria-labelledby="prompt-results">
+            <div class="prompts-group">
+                <div class="catalog-grid catalog-grid--catalog">
+                <article class="product-card product-card--catalog">
+                    <a href="/prompt" class="product-card__link">
+                        <img src="Pictures/image 2.png" alt="Cozy Autumn Lounge" class="product-card__image">
+                    </a>
+                    <div class="product-card__overlay">
+                        <div class="product-card__info-row">
+                            <p class="product-card__price">$7.99</p>
+                            <p class="product-card__rating">&#9733;&#9733;&#9733;&#9733;&#9734;</p>
+                        </div>
+                        <p class="product-card__tags"><small>#design #furniture</small></p>
+                    </div>
+                </article>
+                <article class="product-card product-card--catalog">
+                    <a href="/prompt" class="product-card__link">
+                        <img src="Pictures/image 8.png" alt="Ancient statue" class="product-card__image">
+                    </a>
+                    <div class="product-card__overlay">
+                        <div class="product-card__info-row">
+                            <p class="product-card__price">$5.99</p>
+                            <p class="product-card__rating">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+                        </div>
+                        <p class="product-card__tags"><small>#mythology #sculpture</small></p>
+                    </div>
+                </article>
+                <article class="product-card product-card--catalog">
+                    <a href="/prompt" class="product-card__link">
+                        <img src="Pictures/image 9.png" alt="Cyberpunk city" class="product-card__image">
+                    </a>
+                    <div class="product-card__overlay">
+                            <div class="product-card__info-row">
+                            <p class="product-card__price">$2.99</p>
+                            <p class="product-card__rating">&#9733;&#9733;&#9733;&#9733;&#9734;</p>
+                        </div>
+                        <p class="product-card__tags"><small>#cyberpunk #cityscape</small></p>
+                    </div>
+                </article>
+                <article class="product-card product-card--catalog">
+                    <a href="/prompt" class="product-card__link">
+                        <img src="Pictures/image 15.png" alt="Dragon" class="product-card__image">
+                    </a>
+                    <div class="product-card__overlay">
+                            <div class="product-card__info-row">
+                            <p class="product-card__price">$7.49</p>
+                            <p class="product-card__rating">&#9733;&#9733;&#9733;&#9733;&#9734;</p>
+                        </div>
+                        <p class="product-card__tags"><small>#animals #mythology</small></p>
+                    </div>
+                </article>
+                <article class="product-card product-card--catalog">
+                    <a href="/prompt" class="product-card__link">
+                        <img src="Pictures/image 17.png" alt="Cybernetic cat" class="product-card__image">
+                    </a>
+                    <div class="product-card__overlay">
+                            <div class="product-card__info-row">
+                            <p class="product-card__price">$3.99</p>
+                            <p class="product-card__rating">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+                        </div>
+                        <p class="product-card__tags"><small>#animals #cyberpunk</small></p>
+                    </div>
+                </article>
+                <article class="product-card product-card--catalog">
+                    <a href="/prompt" class="product-card__link">
+                        <img src="Pictures/image 18.png" alt="Monster couch" class="product-card__image">
+                    </a>
+                    <div class="product-card__overlay">
+                            <div class="product-card__info-row">
+                            <p class="product-card__price">$9.99</p>
+                            <p class="product-card__rating">&#9733;&#9733;&#9733;&#9734;&#9734;</p>
+                        </div>
+                        <p class="product-card__tags"><small>#cartoon #furniture</small></p>
+                    </div>
+                </article>
+                <article class="product-card product-card--catalog">
+                    <a href="/prompt" class="product-card__link">
+                        <img src="Pictures/image 19.png" alt="Forest ghost" class="product-card__image">
+                    </a>
+                    <div class="product-card__overlay">
+                            <div class="product-card__info-row">
+                            <p class="product-card__price">$2.49</p>
+                            <p class="product-card__rating">&#9733;&#9733;&#9734;&#9734;&#9734;</p>
+                        </div>
+                        <p class="product-card__tags"><small>#forest #mythology</small></p>
+                    </div>
+                </article>
+                <article class="product-card product-card--catalog">
+                    <a href="/prompt" class="product-card__link">
+                        <img src="Pictures/image 20.png" alt="Cyberpunk owl" class="product-card__image">
+                    </a>
+                    <div class="product-card__overlay">
+                            <div class="product-card__info-row">
+                            <p class="product-card__price">$7.49</p>
+                            <p class="product-card__rating">&#9733;&#9733;&#9733;&#9733;&#9734;</p>
+                        </div>
+                        <p class="product-card__tags"><small>#animals #cyberpunk</small></p>
+                    </div>
+                </article>
+                <article class="product-card product-card--catalog">
+                    <a href="/prompt" class="product-card__link">
+                        <img src="Pictures/image 21.png" alt="Mythology throne" class="product-card__image">
+                    </a>
+                    <div class="product-card__overlay">
+                            <div class="product-card__info-row">
+                            <p class="product-card__price">$6.49</p>
+                            <p class="product-card__rating">&#9733;&#9733;&#9733;&#9733;&#9734;</p>
+                        </div>
+                        <p class="product-card__tags"><small>#furniture #mythology</small></p>
+                    </div>
+                </article>
+                <article class="product-card product-card--catalog">
+                    <a href="/prompt" class="product-card__link">
+                        <img src="Pictures/image 22.png" alt="Cute design" class="product-card__image">
+                    </a>
+                    <div class="product-card__overlay">
+                            <div class="product-card__info-row">
+                            <p class="product-card__price">$10.49</p>
+                            <p class="product-card__rating">&#9733;&#9733;&#9733;&#9733;&#9734;</p>
+                        </div>
+                        <p class="product-card__tags"><small>#design #cute</small></p>
+                    </div>
+                </article>
+                <article class="product-card product-card--catalog">
+                    <a href="/prompt" class="product-card__link">
+                        <img src="Pictures/image 23.png" alt="Cyberpunk dragon" class="product-card__image">
+                    </a>
+                    <div class="product-card__overlay">
+                            <div class="product-card__info-row">
+                            <p class="product-card__price">$19.99</p>
+                            <p class="product-card__rating">&#9733;&#9733;&#9733;&#9733;&#9734;</p>
+                        </div>
+                        <p class="product-card__tags"><small>#mythology #cyberpunk</small></p>
+                    </div>
+                </article>
+                <article class="product-card product-card--catalog">
+                    <a href="/prompt" class="product-card__link">
+                        <img src="Pictures/image 4.png" alt="Twilight Muse" class="product-card__image">
+                    </a>
+                    <div class="product-card__overlay">
+                            <div class="product-card__info-row">
+                            <p class="product-card__price">$4.49</p>
+                            <p class="product-card__rating">&#9733;&#9733;&#9733;&#9733;&#9734;</p>
+                        </div>
+                        <p class="product-card__tags"><small>#portrait #sculpture</small></p>
+                    </div>
+                </article>
+                <article class="product-card product-card--catalog">
+                    <a href="/prompt" class="product-card__link">
+                        <img src="Pictures/image 3.png" alt="Plumpy Cat" class="product-card__image">
+                    </a>
+                    <div class="product-card__overlay">
+                            <div class="product-card__info-row">
+                            <p class="product-card__price">$12.99</p>
+                            <p class="product-card__rating">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+                        </div>
+                        <p class="product-card__tags"><small>#animals #cartoon</small></p>
+                    </div>
+                </article>
+                <article class="product-card product-card--catalog">
+                    <a href="/prompt" class="product-card__link">
+                        <img src="Pictures/image 5.png" alt="Dark Forest" class="product-card__image">
+                    </a>
+                    <div class="product-card__overlay">
+                            <div class="product-card__info-row">
+                            <p class="product-card__price">$6.49</p>
+                            <p class="product-card__rating">&#9733;&#9733;&#9733;&#9733;&#9734;</p>
+                        </div>
+                        <p class="product-card__tags"><small>#nature #forest</small></p>
+                    </div>
+                </article>
+                <article class="product-card product-card--catalog">
+                    <a href="/prompt" class="product-card__link">
+                        <img src="Pictures/image 6.png" alt="Futuristic City" class="product-card__image">
+                    </a>
+                    <div class="product-card__overlay">
+                        <div class="product-card__info-row">
+                            <p class="product-card__price">$2.49</p>
+                            <p class="product-card__rating">&#9733;&#9733;&#9733;&#9733;&#9734;</p>
+                        </div>
+                        <p class="product-card__tags"><small>#cityscape #future</small></p>
+                    </div>
+                </article>
+                </div>
+            </div>
+        </section>
+    </div>
 </main>
     <%- include('partials/footer') %>

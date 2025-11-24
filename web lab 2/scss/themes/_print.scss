@@ -1,0 +1,77 @@
+@use '../abstracts/variables' as var;
+@use '../abstracts/functions' as fn;
+
+@media print {
+    * {
+        background: white !important;
+        color: black !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    .header,
+    .footer,
+    .button,
+    nav,
+    .catalog-filter,
+    .why-choose,
+    .order-summary__promocode,
+    .order-summary__payment-btn {
+        display: none !important;
+    }
+
+    main {
+        padding: 0;
+        margin: 0;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+        page-break-inside: avoid;
+    }
+
+    h1, h2, h3 {
+        page-break-after: avoid;
+    }
+
+    article, section {
+        page-break-inside: avoid;
+    }
+
+    a {
+        text-decoration: underline;
+        
+        &[href^="http"]:after {
+            content: " (" attr(href) ")";
+            font-size: 0.8em;
+        }
+    }
+
+    .product-card__overlay,
+    .ai-models-content-overlay,
+    .cart-item__remove {
+        display: none !important;
+    }
+
+    .product-card__price,
+    .cart-item__price,
+    .order-summary__value {
+        font-weight: bold;
+    }
+
+    table {
+        border-collapse: collapse;
+        width: 100%;
+        
+        th, td {
+            border: 1px solid #000;
+            padding: fn.rem(8);
+        }
+    }
+
+    .prompt-detail__main,
+    .cart-items__list {
+        page-break-inside: avoid;
+    }
+}

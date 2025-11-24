@@ -1,0 +1,10 @@
+@use 'variables' as var;
+@use 'sass:math';
+@use 'sass:color';
+@function rem($pixels) {
+    @return math.div($pixels, var.$base-font-size) * 1rem; 
+}
+
+@function color-mix($color1, $color2, $weight: 50%) {
+    @return color.mix($color1, $color2, $weight);
+}

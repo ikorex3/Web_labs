@@ -1,0 +1,29 @@
+@use '../abstracts/variables' as var;
+@use '../abstracts/functions' as fn;
+@use '../abstracts/mixins' as mix;
+.prompts-group {
+    background-color: var.$color-overlay-1; 
+    border-radius: fn.rem(15);
+    padding: fn.rem(30);
+    margin-top: fn.rem(30);
+    margin-bottom: fn.rem(30); 
+&__header {
+        @include mix.flex-group(space-between, center);
+        margin-bottom: fn.rem(20);
+        
+        h2 {
+            margin: 0; 
+        }
+
+        p {
+            margin: 0;
+         a {
+            color: var.$color-text-secondary; 
+            font-size: fn.rem(var.$font-size-main);
+            &:hover {
+                 color: var.$color-text-primary;
+            }
+            }
+        }
+    }
+}

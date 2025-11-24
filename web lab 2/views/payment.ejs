@@ -1,74 +1,93 @@
 <%- include('partials/head') %>
 <main>
-    <h3>Items in cart</h3>
-    <table>
-        <thead>
-            <th>Details about prompts</th>
-            <th>Price</th>
-        </thead>
-        <tbody>
-            <tr>
-                <td>
-                    <picture>
-                        <source srcset="Pictures\image 2 large.png" media="(min-width: 600px)">
-                        <img src="Pictures\image 2.png" alt="Cozy Autumn Lounge">
+    <div class="container">
+        <section class="cart-items" aria-labelledby="cart-title">
+            <div class="cart-items__wrapper">
+                <h3 id="cart-title" class="cart-items__title">Items in cart</h3>
+                <div class="cart-items__table">
+                    <div class="cart-items__list">
+                        <article class="cart-item">
+                            <div class="cart-item__details">
+                                <picture class="cart-item__image-wrapper">
+                                    <source srcset="Pictures\image 2 large.png" media="(min-width: 600px)">
+                                    <img src="Pictures\image 2.png" alt="Cozy Autumn Lounge" class="cart-item__image">
+                                </picture>
+                                <div class="cart-item__info">
+                                    <h3 class="cart-item__name">Cozy Autumn Lounge</h3>
+                                    <span class="cart-item__rating" role="img" aria-label="Rating">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
+                                </div>
+                            </div>
+                            <div class="cart-item__price">$7.99</div>
+                            <button class="button button--primary cart-item__remove" aria-label="Remove Cozy Autumn Lounge">Remove</button>
+                        </article>
+                        <article class="cart-item">
+                            <div class="cart-item__details">
+                                <picture class="cart-item__image-wrapper">
+                                    <source srcset="Pictures\image 4 large.png" media="(min-width: 600px)">
+                                    <img src="Pictures\image 4.png" alt="Twilight Muse" class="cart-item__image">
+                                </picture>
+                                <div class="cart-item__info">
+                                    <h3 class="cart-item__name">Twilight Muse</h3>
+                                    <span class="cart-item__rating" role="img" aria-label="Rating">&#9733;&#9733;&#9733;&#9734;&#9734;</span>
+                                </div>
+                            </div>
+                            <div class="cart-item__price">$4.49</div>
+                            <button class="button button--primary cart-item__remove" aria-label="Remove Twilight Muse">Remove</button>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <aside class="order-summary" aria-labelledby="order-summary">
+            <div class="order-summary__wrapper">
+                <h3 id="order-summary" class="order-summary__title">Order Summary</h3>
+                <dl class="order-summary__list">
+                    <div class="order-summary__item">
+                        <dt class="order-summary__label">Subtotal</dt>
+                        <dd class="order-summary__value">$12.48</dd>
+                    </div>
+                    <div class="order-summary__item">
+                        <dt class="order-summary__label">Discount</dt>
+                        <dd class="order-summary__value">$0</dd>
+                    </div>
+                </dl>
+                <div class="order-summary__promocode">
+                    <label for="promocode-input" class="order-summary__promocode-label">Promocode</label>
+                    <input type="text" id="promocode-input" placeholder="Enter Promocode" class="order-summary__promocode-input">
+                </div>
+                <button class="button button--primary order-summary__payment-btn">Secure Payment</button>
+            </div>
+        </aside>
+    </div>
+    
+    <section class="why-choose" aria-labelledby="why_choose">
+        <div class="container">
+            <h2 id="why_choose" class="why-choose__title">Why you should choose PromptForge</h2>
+            <div class="why-choose__cards">
+                <article class="why-choose__card">
+                    <picture class="why-choose__icon">
+                        <source srcset="Pictures\user-protection large.png" media="(min-width: 600px)">
+                        <img src="Pictures\user-protection 1.png" alt="Verified Prompts">
                     </picture>
-                    <h3>Cozy Autumn Lounge</h3>
-                    <span role="img" aria-label="Rating">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
-                </td>
-                <td>$7.99</td>
-                <td>
-                    <button aria-label="Remove Cozy Autumn Lounge">Remove</button>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <picture>
-                        <source srcset="Pictures\image 4 large.png" media="(min-width: 600px)">
-                        <img src="Pictures\image 4.png" alt="Twilight Muse">
+                    <p class="why-choose__text">Verified Prompts</p>
+                </article>
+                <article class="why-choose__card">
+                    <picture class="why-choose__icon">
+                        <source srcset="Pictures\security 1 large.png" media="(min-width: 600px)">
+                        <img src="Pictures\security 1.png" alt="Security">
                     </picture>
-
-                    <h3>Twilight Muse</h3>
-                    <span role="img" aria-label="Rating">&#9733;&#9733;&#9733;&#9734;&#9734;</span>
-                </td>
-                <td>$4.49</td>
-                <td>
-                    <button aria-label="Remove Twilight Muse">Remove</button>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-    <aside aria-labelledby="order-summary">
-        <h3 id="order-summary">Order Summary</h3>
-        <dl>
-            <dt>Subtotal</dt>
-            <dd>$12.48</dd>
-            <dt>Discount</dt>
-            <dd>$0</dd>
-        </dl>
-        <div>
-            <label for="promocode-input">Promocode</label>
-            <input placeholder="Enter Promocode">
+                    <p class="why-choose__text">Secure Payments</p>
+                </article>
+                <article class="why-choose__card">
+                    <picture class="why-choose__icon">
+                        <source srcset="Pictures\star-rating large.png" media="(min-width: 600px)">
+                        <img src="Pictures\star-rating 1.png" alt="Trusted">
+                    </picture>
+                    <p class="why-choose__text">Trusted by creators</p>
+                </article>
+            </div>
         </div>
-        <button>Secure Payment</button>
-    </aside>
-    <section aria-labelledby="why_choose">
-        <h2 id="why_choose">Why you should choose PromptForge</h2>
-        <picture>
-            <source srcset="Pictures\user-protection large.png" media="(min-width: 600px)">
-            <img src="Pictures\user-protection 1.png" alt="Verified Prompts">
-        </picture>
-        <p>Verified Prompts</p>
-        <picture>
-            <source srcset="Pictures\security 1 large.png" media="(min-width: 600px)">
-            <img src="Pictures\security 1.png" alt="Security">
-        </picture>
-        <p>Secure Payments</p>
-        <picture>
-            <source srcset="Pictures\star-rating large.png" media="(min-width: 600px)">
-            <img src="Pictures\star-rating 1.png" alt="Trusted">
-        </picture>
-        <p>Trusted by creators</p>
     </section>
 </main>
     <%- include('partials/footer') %>

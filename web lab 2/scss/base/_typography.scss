@@ -1,0 +1,32 @@
+@use '../abstracts/variables' as var;
+@use '../abstracts/mixins' as mix;
+@use '../abstracts/functions' as fn;
+
+h1 {
+    @include mix.title-style(var.$font-size-h1);
+    margin-bottom: fn.rem(30);
+}
+
+h2 {
+    @include mix.title-style(var.$font-size-h2);
+    margin-bottom: fn.rem(20);
+}
+
+h3 {
+    @include mix.title-style(var.$font-size-h3);
+    margin-bottom: fn.rem(15);
+}
+
+p {
+    font-size: fn.rem(var.$font-size-main);
+    line-height: 1.6;
+    margin-bottom: fn.rem(15);
+}
+
+small {
+    font-size: fn.rem(var.$font-size-hashtag);
+    color: var.$color-text-secondary;
+}
+.popular-prompts-section {
+    margin-bottom: fn.rem(30);
+}

@@ -1,0 +1,14 @@
+@use '../abstracts/variables' as var;
+@use '../abstracts/functions' as fn;
+
+.footer {
+    background-color: var.$color-overlay-1;
+    padding: fn.rem(20) fn.rem(0);
+    text-align: center;
+    border-top: 1px solid fn.color-mix(var.$color-bg, var.$color-text-secondary, 10%);
+
+    &__copy {
+        font-size: fn.rem(var.$font-size-hashtag);
+        color: var.$color-text-secondary;
+    }
+}

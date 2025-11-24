@@ -1,0 +1,109 @@
+@use '../abstracts/variables' as var;
+@use '../abstracts/functions' as fn;
+@use '../abstracts/mixins' as mix;
+@use '../abstracts/breakpoints' as b;
+
+.product-card {
+    background-color: transparent; 
+    border-radius: fn.rem(10);
+    padding: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    animation: appear 1s ease forwards;
+    opacity: 0;
+    
+    &__link {
+        display: block;
+        margin-bottom: 0;
+    }
+    
+    &__image {
+        width: 100%;
+        border-radius: fn.rem(15) fn.rem(15) 0 0;
+        height: auto;
+        object-fit: cover;
+        display: block;
+    }
+    
+    &__overlay {
+        background-color: var.$color-overlay-2;
+        border-radius: 0 0 fn.rem(15) fn.rem(15);
+        padding: fn.rem(15) fn.rem(18);
+    }
+
+    &__price {
+        font-size: fn.rem(var.$font-size-prices-big);
+        font-weight: 700;
+        color: var.$color-text-primary;
+        margin: 0;
+    }
+
+    &__info-row { 
+        @include mix.flex-group(space-between, center); 
+        margin: 0;
+        margin-bottom: fn.rem(8);
+    }
+
+    &__tags {
+        font-size: fn.rem(var.$font-size-hashtag);
+        color: var.$color-text-secondary;
+        margin: 0;
+    }
+
+    &__rating {
+        margin: 0;
+        color: var.$color-star; 
+        font-size: fn.rem(var.$font-size-prices-big);
+    }
+}
+
+.product-card--catalog {
+    background-color: transparent;
+    padding: 0;
+    transition: transform 0.2s ease;
+
+    &:hover {
+        transform: translateY(fn.rem(-4));
+    }
+
+    .product-card__image {
+        max-height: fn.rem(200);
+        object-fit: cover;
+    }
+}
+
+.catalog-grid {
+    @include mix.grid(1, fn.rem(20));
+
+    @include b.media-up(mobile) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include b.media-up(tablet) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include b.media-up(desktop) {
+        grid-template-columns: repeat(5, 1fr);
+    }
+    
+    .product-card {
+        @for $i from 1 through 20 {
+            &:nth-child(#{$i}) {
+                animation-delay: #{$i * 0.15}s;
+            }
+        }
+    }
+}
+
+.catalog-grid--catalog {
+    gap: fn.rem(24);
+}
+
+.catalog-results__meta {
+    color: var.$color-text-secondary;
+    font-size: fn.rem(var.$font-size-hashtag);
+    margin: 0;
+}

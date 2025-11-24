@@ -1,0 +1,25 @@
+@use '../abstracts/variables' as var;
+@use '../abstracts/functions' as fn;
+
+html {
+    font-size: var.$base-font-size * 1px; 
+}
+
+body {
+    background-color: var.$color-bg;
+    color: var.$color-text-primary;
+    font-family: var.$font-primary;
+    font-size: fn.rem(var.$font-size-main);
+    line-height: 1.5;
+    min-height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    color: var.$color-button-primary; 
+    transition: opacity 0.2s ease;
+    
+    &:hover {
+        opacity: 0.8;
+    }
+}

@@ -1,0 +1,5 @@
+@use '../abstracts/mixins' as mix;
+
+.container {
+    @include mix.container(1200);
+}

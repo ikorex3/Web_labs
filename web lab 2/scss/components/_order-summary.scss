@@ -1,0 +1,93 @@
+@use '../abstracts/variables' as var;
+@use '../abstracts/functions' as fn;
+@use '../abstracts/mixins' as mix;
+@use '../abstracts/breakpoints' as b;
+
+.order-summary {
+    margin-top: fn.rem(30);
+    margin-bottom: fn.rem(30);
+
+    &__wrapper {
+        background-color: var.$color-overlay-1;
+        border-radius: fn.rem(15);
+        padding: fn.rem(20);
+    }
+
+    &__title {
+        @include mix.title-style(var.$font-size-h3);
+        margin: 0;
+        margin-bottom: fn.rem(20);
+    }
+
+    &__list {
+        margin: 0;
+        margin-bottom: fn.rem(20);
+    }
+
+    &__item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: fn.rem(15);
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__label {
+        font-size: fn.rem(var.$font-size-main);
+        color: var.$color-text-primary;
+        font-weight: 400;
+        margin: 0;
+    }
+
+    &__value {
+        font-size: fn.rem(var.$font-size-prices-big);
+        font-weight: 700;
+        color: var.$color-text-primary;
+        margin: 0;
+    }
+
+    &__promocode {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: fn.rem(20);
+        gap: fn.rem(15);
+    }
+
+    &__promocode-label {
+        font-size: fn.rem(var.$font-size-main);
+        color: var.$color-text-primary;
+        margin: 0;
+        flex-shrink: 0;
+    }
+
+    &__promocode-input {
+        flex: 0 0 50%;
+        max-width: 50%;
+        padding: fn.rem(12) fn.rem(15);
+        border: none;
+        border-radius: fn.rem(8);
+        background-color: var.$color-overlay-2;
+        color: var.$color-text-primary;
+        font-size: fn.rem(var.$font-size-placeholder);
+        
+        &::placeholder {
+            color: var.$color-text-secondary;
+        }
+
+        &:focus {
+            outline: none;
+            box-shadow: 0 0 0 2px rgba(138, 43, 226, 0.35);
+        }
+    }
+
+    &__payment-btn {
+        width: 100%;
+        padding: fn.rem(12) fn.rem(20);
+        font-size: fn.rem(var.$font-size-cta);
+    }
+}
+

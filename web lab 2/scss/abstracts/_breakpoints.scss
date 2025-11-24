@@ -1,0 +1,13 @@
+@use 'variables' as var;
+
+@mixin media-up($breakpoint) {
+    @if $breakpoint == mobile {
+        @media (min-width: var.$breakpoint-mobile) { @content; }
+    } @else if $breakpoint == tablet {
+        @media (min-width: var.$breakpoint-tablet) { @content; }
+    } @else if $breakpoint == desktop {
+        @media (min-width: var.$breakpoint-desktop) { @content; }
+    } @else {
+        @warn "mobile, tablet, desktop";
+    }
+}

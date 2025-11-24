@@ -1,0 +1,104 @@
+@use '../abstracts/variables' as var;
+@use '../abstracts/functions' as fn;
+@use '../abstracts/mixins' as mix;
+@use '../abstracts/breakpoints' as b;
+
+.cart-items {
+    margin-top: fn.rem(30);
+    margin-bottom: fn.rem(30);
+
+    &__wrapper {
+        background-color: var.$color-overlay-1;
+        border-radius: fn.rem(15);
+        padding: fn.rem(18);
+    }
+
+    &__title {
+        @include mix.title-style(var.$font-size-h3);
+        margin: 0;
+        margin-bottom: fn.rem(20);
+    }
+
+    &__table {
+        width: 100%;
+    }
+
+    &__header {
+        @include mix.grid(1, fn.rem(20), 2fr 1fr auto);
+        padding-bottom: fn.rem(15);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        margin-bottom: fn.rem(20);
+    }
+
+    &__header-details,
+    &__header-price {
+        font-size: fn.rem(var.$font-size-small);
+        color: var.$color-text-secondary;
+        font-weight: 600;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: fn.rem(20);
+    }
+}
+
+.cart-item {
+    @include mix.grid(1, fn.rem(20), 2fr 1fr auto);
+    align-items: center;
+    padding-bottom: fn.rem(20);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+
+    &:last-child {
+        border-bottom: none;
+        padding-bottom: 0;
+    }
+
+    &__details {
+        display: flex;
+        gap: fn.rem(15);
+        align-items: center;
+    }
+
+    &__image-wrapper {
+        flex-shrink: 0;
+    }
+
+    &__image {
+        width: fn.rem(80);
+        height: fn.rem(80);
+        border-radius: fn.rem(10);
+        object-fit: cover;
+        display: block;
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        gap: fn.rem(8);
+    }
+
+    &__name {
+        @include mix.title-style(var.$font-size-h3);
+        margin: 0;
+        font-size: fn.rem(var.$font-size-main);
+    }
+
+    &__rating {
+        color: var.$color-star;
+        font-size: fn.rem(16);
+    }
+
+    &__price {
+        font-size: fn.rem(var.$font-size-prices-big);
+        font-weight: 700;
+        color: var.$color-text-primary;
+    }
+
+    &__remove {
+        padding: fn.rem(8) fn.rem(20);
+        font-size: fn.rem(var.$font-size-small);
+    }
+}
+

@@ -1,0 +1,78 @@
+@use '../abstracts/variables' as var;
+@use '../abstracts/functions' as fn;
+
+@for $i from 0 through 10 {
+    $value: $i * 10;
+    .mt-#{$value} {
+        margin-top: fn.rem($value);
+    }
+}
+
+@for $i from 0 through 10 {
+    $value: $i * 10;
+    .mb-#{$value} {
+        margin-bottom: fn.rem($value);
+    }
+}
+
+@for $i from 0 through 10 {
+    $value: $i * 10;
+    .ml-#{$value} {
+        margin-left: fn.rem($value);
+    }
+}
+
+@for $i from 0 through 10 {
+    $value: $i * 10;
+    .mr-#{$value} {
+        margin-right: fn.rem($value);
+    }
+}
+
+@for $i from 0 through 10 {
+    $value: $i * 10;
+    .pt-#{$value} {
+        padding-top: fn.rem($value);
+    }
+}
+
+@for $i from 0 through 10 {
+    $value: $i * 10;
+    .pb-#{$value} {
+        padding-bottom: fn.rem($value);
+    }
+}
+
+@for $i from 0 through 10 {
+    $value: $i * 10;
+    .pl-#{$value} {
+        padding-left: fn.rem($value);
+    }
+}
+
+@for $i from 0 through 10 {
+    $value: $i * 10;
+    .pr-#{$value} {
+        padding-right: fn.rem($value);
+    }
+}
+
+.mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.my-auto {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.p-0 { padding: 0; }
+.p-10 { padding: fn.rem(10); }
+.p-20 { padding: fn.rem(20); }
+.p-30 { padding: fn.rem(30); }
+
+.m-0 { margin: 0; }
+.m-10 { margin: fn.rem(10); }
+.m-20 { margin: fn.rem(20); }
+.m-30 { margin: fn.rem(30); }

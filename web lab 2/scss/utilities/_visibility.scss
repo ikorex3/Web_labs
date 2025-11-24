@@ -1,0 +1,71 @@
+@use '../abstracts/breakpoints' as b;
+
+.hidden {
+    display: none !important;
+}
+
+.visible {
+    display: block !important;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+.hide-mobile {
+    @include b.media-up(mobile) {
+        display: none !important;
+    }
+}
+
+.hide-tablet-up {
+    @include b.media-up(tablet) {
+        display: none !important;
+    }
+}
+
+.hide-desktop {
+    @include b.media-up(desktop) {
+        display: none !important;
+    }
+}
+
+.show-mobile-only {
+    display: block !important;
+    
+    @include b.media-up(mobile) {
+        display: none !important;
+    }
+}
+
+.show-tablet-up {
+    display: none !important;
+    
+    @include b.media-up(tablet) {
+        display: block !important;
+    }
+}
+
+.show-desktop-only {
+    display: none !important;
+    
+    @include b.media-up(desktop) {
+        display: block !important;
+    }
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.opacity-0 { opacity: 0; }
+.opacity-50 { opacity: 0.5; }
+.opacity-100 { opacity: 1; }
