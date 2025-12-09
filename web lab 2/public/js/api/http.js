@@ -1,56 +1,54 @@
+import axios from 'https://cdn.jsdelivr.net/npm/axios@1.7.9/dist/esm/axios.min.js';
 
 class HttpClient {
     constructor(baseURL = 'http://localhost:3001') {
         this.baseURL = baseURL;
+        this.instance = axios.create({
+            baseURL: this.baseURL,
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        });
     }
 
-    async request(url, options = {}) {
-        const fullUrl = `${this.baseURL}${url}`;
-        const config = {
-            headers: {
-                'Content-Type': 'application/json',
-                ...options.headers
-            },
-            ...options
-        };
-
+    async get(url, params = {}) {
         try {
-            const response = await fetch(fullUrl, config);
-            
-            if (!response.ok) {
-                throw new Error(`HTTP Error: ${response.status} ${response.statusText}`);
-            }
-
-            const data = await response.json();
-            return { data };
+            const response = await this.instance.get(url, { params });
+            return { data: response.data };
         } catch (error) {
             console.error('HTTP Error:', error.message);
             throw error;
         }
     }
 
-    get(url, params = {}) {
-        const queryString = new URLSearchParams(params).toString();
-        const fullUrl = queryString ? `${url}?${queryString}` : url;
-        return this.request(fullUrl, { method: 'GET' });
+    async post(url, data) {
+        try {
+            const response = await this.instance.post(url, data);
+            return { data: response.data };
+        } catch (error) {
+            console.error('HTTP Error:', error.message);
+            throw error;
+        }
     }
 
-    post(url, data) {
-        return this.request(url, {
-            method: 'POST',
-            body: JSON.stringify(data)
-        });
+    async put(url, data) {
+        try {
+            const response = await this.instance.put(url, data);
+            return { data: response.data };
+        } catch (error) {
+            console.error('HTTP Error:', error.message);
+            throw error;
+        }
     }
 
-    put(url, data) {
-        return this.request(url, {
-            method: 'PUT',
-            body: JSON.stringify(data)
-        });
-    }
-
-    delete(url) {
-        return this.request(url, { method: 'DELETE' });
+    async delete(url) {
+        try {
+            const response = await this.instance.delete(url);
+            return { data: response.data };
+        } catch (error) {
+            console.error('HTTP Error:', error.message);
+            throw error;
+        }
     }
 }
 
