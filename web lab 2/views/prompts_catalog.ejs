@@ -52,22 +52,36 @@
                 </div>
 
                 <div class="catalog-filter__field">
-                    <label for="novelty" class="catalog-filter__label">Novelty</label>
-                    <select id="novelty" name="novelty" class="catalog-filter__select">
-                        <option value="" disabled selected>Select</option>
-                        <option>Any</option>
-                        <option>Newest</option>
-                        <option>Oldest</option>
-                        <option>This week</option>
-                        <option>This month</option>
+                    <label for="sortBy" class="catalog-filter__label">Sort By</label>
+                    <select id="sortBy" name="sortBy" class="catalog-filter__select">
+                        <option value="id" selected>Default</option>
+                        <option value="price">Price</option>
+                        <option value="rating">Rating</option>
+                    </select>
+                </div>
+
+                <div class="catalog-filter__field">
+                    <label for="sortOrder" class="catalog-filter__label">Order</label>
+                    <select id="sortOrder" name="sortOrder" class="catalog-filter__select">
+                        <option value="asc" selected>Ascending</option>
+                        <option value="desc">Descending</option>
                     </select>
                 </div>
 
                 <div class="catalog-filter__search">
                     <label for="catalog-search" class="catalog-filter__label">Search by #</label>
                     <div class="catalog-filter__search-field">
-                        <input type="search" id="catalog-search" placeholder="Search by #" aria-label="Search by tag"
-                            class="catalog-filter__search-input">
+                        <input 
+                            type="search" 
+                            id="catalog-search" 
+                            name="search"
+                            placeholder="Search by #" 
+                            aria-label="Search by tag"
+                            class="catalog-filter__search-input"
+                            pattern="[A-Za-z0-9\s#]+"
+                            maxlength="50"
+                        >
+                        <span class="error-message" id="search-error"></span>
                     </div>
                 </div>
                 </form>
@@ -78,189 +92,13 @@
         <section class="catalog-results" aria-labelledby="prompt-results">
             <div class="prompts-group">
                 <div class="catalog-grid catalog-grid--catalog">
-                <article class="product-card product-card--catalog">
-                    <a href="/prompt" class="product-card__link">
-                        <img src="Pictures/image 2.png" alt="Cozy Autumn Lounge" class="product-card__image">
-                    </a>
-                    <div class="product-card__overlay">
-                        <div class="product-card__info-row">
-                            <p class="product-card__price">$7.99</p>
-                            <p class="product-card__rating">&#9733;&#9733;&#9733;&#9733;&#9734;</p>
-                        </div>
-                        <p class="product-card__tags"><small>#design #furniture</small></p>
-                    </div>
-                </article>
-                <article class="product-card product-card--catalog">
-                    <a href="/prompt" class="product-card__link">
-                        <img src="Pictures/image 8.png" alt="Ancient statue" class="product-card__image">
-                    </a>
-                    <div class="product-card__overlay">
-                        <div class="product-card__info-row">
-                            <p class="product-card__price">$5.99</p>
-                            <p class="product-card__rating">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
-                        </div>
-                        <p class="product-card__tags"><small>#mythology #sculpture</small></p>
-                    </div>
-                </article>
-                <article class="product-card product-card--catalog">
-                    <a href="/prompt" class="product-card__link">
-                        <img src="Pictures/image 9.png" alt="Cyberpunk city" class="product-card__image">
-                    </a>
-                    <div class="product-card__overlay">
-                            <div class="product-card__info-row">
-                            <p class="product-card__price">$2.99</p>
-                            <p class="product-card__rating">&#9733;&#9733;&#9733;&#9733;&#9734;</p>
-                        </div>
-                        <p class="product-card__tags"><small>#cyberpunk #cityscape</small></p>
-                    </div>
-                </article>
-                <article class="product-card product-card--catalog">
-                    <a href="/prompt" class="product-card__link">
-                        <img src="Pictures/image 15.png" alt="Dragon" class="product-card__image">
-                    </a>
-                    <div class="product-card__overlay">
-                            <div class="product-card__info-row">
-                            <p class="product-card__price">$7.49</p>
-                            <p class="product-card__rating">&#9733;&#9733;&#9733;&#9733;&#9734;</p>
-                        </div>
-                        <p class="product-card__tags"><small>#animals #mythology</small></p>
-                    </div>
-                </article>
-                <article class="product-card product-card--catalog">
-                    <a href="/prompt" class="product-card__link">
-                        <img src="Pictures/image 17.png" alt="Cybernetic cat" class="product-card__image">
-                    </a>
-                    <div class="product-card__overlay">
-                            <div class="product-card__info-row">
-                            <p class="product-card__price">$3.99</p>
-                            <p class="product-card__rating">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
-                        </div>
-                        <p class="product-card__tags"><small>#animals #cyberpunk</small></p>
-                    </div>
-                </article>
-                <article class="product-card product-card--catalog">
-                    <a href="/prompt" class="product-card__link">
-                        <img src="Pictures/image 18.png" alt="Monster couch" class="product-card__image">
-                    </a>
-                    <div class="product-card__overlay">
-                            <div class="product-card__info-row">
-                            <p class="product-card__price">$9.99</p>
-                            <p class="product-card__rating">&#9733;&#9733;&#9733;&#9734;&#9734;</p>
-                        </div>
-                        <p class="product-card__tags"><small>#cartoon #furniture</small></p>
-                    </div>
-                </article>
-                <article class="product-card product-card--catalog">
-                    <a href="/prompt" class="product-card__link">
-                        <img src="Pictures/image 19.png" alt="Forest ghost" class="product-card__image">
-                    </a>
-                    <div class="product-card__overlay">
-                            <div class="product-card__info-row">
-                            <p class="product-card__price">$2.49</p>
-                            <p class="product-card__rating">&#9733;&#9733;&#9734;&#9734;&#9734;</p>
-                        </div>
-                        <p class="product-card__tags"><small>#forest #mythology</small></p>
-                    </div>
-                </article>
-                <article class="product-card product-card--catalog">
-                    <a href="/prompt" class="product-card__link">
-                        <img src="Pictures/image 20.png" alt="Cyberpunk owl" class="product-card__image">
-                    </a>
-                    <div class="product-card__overlay">
-                            <div class="product-card__info-row">
-                            <p class="product-card__price">$7.49</p>
-                            <p class="product-card__rating">&#9733;&#9733;&#9733;&#9733;&#9734;</p>
-                        </div>
-                        <p class="product-card__tags"><small>#animals #cyberpunk</small></p>
-                    </div>
-                </article>
-                <article class="product-card product-card--catalog">
-                    <a href="/prompt" class="product-card__link">
-                        <img src="Pictures/image 21.png" alt="Mythology throne" class="product-card__image">
-                    </a>
-                    <div class="product-card__overlay">
-                            <div class="product-card__info-row">
-                            <p class="product-card__price">$6.49</p>
-                            <p class="product-card__rating">&#9733;&#9733;&#9733;&#9733;&#9734;</p>
-                        </div>
-                        <p class="product-card__tags"><small>#furniture #mythology</small></p>
-                    </div>
-                </article>
-                <article class="product-card product-card--catalog">
-                    <a href="/prompt" class="product-card__link">
-                        <img src="Pictures/image 22.png" alt="Cute design" class="product-card__image">
-                    </a>
-                    <div class="product-card__overlay">
-                            <div class="product-card__info-row">
-                            <p class="product-card__price">$10.49</p>
-                            <p class="product-card__rating">&#9733;&#9733;&#9733;&#9733;&#9734;</p>
-                        </div>
-                        <p class="product-card__tags"><small>#design #cute</small></p>
-                    </div>
-                </article>
-                <article class="product-card product-card--catalog">
-                    <a href="/prompt" class="product-card__link">
-                        <img src="Pictures/image 23.png" alt="Cyberpunk dragon" class="product-card__image">
-                    </a>
-                    <div class="product-card__overlay">
-                            <div class="product-card__info-row">
-                            <p class="product-card__price">$19.99</p>
-                            <p class="product-card__rating">&#9733;&#9733;&#9733;&#9733;&#9734;</p>
-                        </div>
-                        <p class="product-card__tags"><small>#mythology #cyberpunk</small></p>
-                    </div>
-                </article>
-                <article class="product-card product-card--catalog">
-                    <a href="/prompt" class="product-card__link">
-                        <img src="Pictures/image 4.png" alt="Twilight Muse" class="product-card__image">
-                    </a>
-                    <div class="product-card__overlay">
-                            <div class="product-card__info-row">
-                            <p class="product-card__price">$4.49</p>
-                            <p class="product-card__rating">&#9733;&#9733;&#9733;&#9733;&#9734;</p>
-                        </div>
-                        <p class="product-card__tags"><small>#portrait #sculpture</small></p>
-                    </div>
-                </article>
-                <article class="product-card product-card--catalog">
-                    <a href="/prompt" class="product-card__link">
-                        <img src="Pictures/image 3.png" alt="Plumpy Cat" class="product-card__image">
-                    </a>
-                    <div class="product-card__overlay">
-                            <div class="product-card__info-row">
-                            <p class="product-card__price">$12.99</p>
-                            <p class="product-card__rating">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
-                        </div>
-                        <p class="product-card__tags"><small>#animals #cartoon</small></p>
-                    </div>
-                </article>
-                <article class="product-card product-card--catalog">
-                    <a href="/prompt" class="product-card__link">
-                        <img src="Pictures/image 5.png" alt="Dark Forest" class="product-card__image">
-                    </a>
-                    <div class="product-card__overlay">
-                            <div class="product-card__info-row">
-                            <p class="product-card__price">$6.49</p>
-                            <p class="product-card__rating">&#9733;&#9733;&#9733;&#9733;&#9734;</p>
-                        </div>
-                        <p class="product-card__tags"><small>#nature #forest</small></p>
-                    </div>
-                </article>
-                <article class="product-card product-card--catalog">
-                    <a href="/prompt" class="product-card__link">
-                        <img src="Pictures/image 6.png" alt="Futuristic City" class="product-card__image">
-                    </a>
-                    <div class="product-card__overlay">
-                        <div class="product-card__info-row">
-                            <p class="product-card__price">$2.49</p>
-                            <p class="product-card__rating">&#9733;&#9733;&#9733;&#9733;&#9734;</p>
-                        </div>
-                        <p class="product-card__tags"><small>#cityscape #future</small></p>
-                    </div>
-                </article>
+                    <!-- Промпти будуть додані динамічно через JavaScript -->
                 </div>
             </div>
+            <div class="pagination"></div>
         </section>
     </div>
+
+    <script type="module" src="/js/catalog.js"></script>
 </main>
     <%- include('partials/footer') %>

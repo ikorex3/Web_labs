@@ -6,6 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
+    "json-server": "json-server --watch db.json --port 3001",
     "scss-build": "sass scss/main.scss:public/css/style.css",
     "scss-watch": "sass --watch scss:public/css",
     "dev": "npm run scss-watch & npm run start"
@@ -15,11 +16,13 @@
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
+    "axios": "^1.7.9",
     "ejs": "^3.1.10",
     "express": "^5.1.0",
     "express-ejs-layouts": "^2.5.1"
   },
   "devDependencies": {
+    "json-server": "^0.17.4",
     "sass": "^1.94.2"
   }
 }

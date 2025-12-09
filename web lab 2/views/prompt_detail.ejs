@@ -1,120 +1,40 @@
 <%- include('partials/head') %>
 <main>
     <div class="container">
-        <article class="prompt-detail" itemscope itemtype="https://schema.org/Product" aria-labelledby="prompt-title">
-            <div class="prompt-detail__main">
-                <div class="prompt-detail__image-wrapper">
-                    <picture>
-                        <source srcset="Pictures\image 2 large.png" media="(min-width: 600px)">
-                        <img src="Pictures\image 2.png" alt="Cozy Autumn Lounge" class="prompt-detail__image" itemprop="image">
-                    </picture>
-                </div>
-                
-                <div class="prompt-detail__info">
-                    <h2 id="prompt-title" class="prompt-detail__title" itemprop="name">Cozy Autumn Lounge</h2>
-                    
-                    <div class="prompt-detail__rating" itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
-                        <p class="prompt-detail__stars">&#9733;&#9733;&#9733;&#9734;&#9734;</p>
-                        <meta itemprop="ratingValue" content="4.3">
-                        <meta itemprop="reviewCount" content="24">
-                    </div>
-                    
-                    <div class="prompt-detail__purchase" itemprop="offers" itemscope itemtype="https://schema.org/AggregateOffer">
-                        <button class="button button--primary prompt-detail__cart-btn" aria-label="Add Lounge to Cart">
-                            <a href="/payment">Add to Cart</a>
-                        </button>
-                        <p class="prompt-detail__price">$<span itemprop="price">12.99</span></p>
-                        <meta itemprop="priceCurrency" content="USD">
-                        <link itemprop="availability" href="https://schema.org/InStock">
-                    </div>
-                    
-                    <section class="prompt-detail__description" aria-labelledby="description">
-                        <h3 id="description" class="prompt-detail__description-title">Prompt Description</h3>
-                        <p class="prompt-detail__description-text" itemprop="description">This prompt is engineered to generate a cinematic, photorealistic image of a warm, inviting lounge area. It perfectly balances indoor comfort with the beauty of the outdoors. A spacious, high-ceilinged room with massive, industrial-style window panels overlooking a foggy, vibrant autumn forest.</p>
-                    </section>
-                </div>
-            </div>
+        <article class="prompt-detail" id="main-product-area" style="min-height: 400px;">
+            <div class="loading-spinner">Loading...</div> 
         </article>
     </div>
     
     <div class="container">
         <div class="prompt-detail__bottom">
+            
             <section class="prompt-reviews" aria-labelledby="reviews">
-                <h3 id="reviews" class="prompt-reviews__title">User reviews <span class="prompt-reviews__rating">4.3</span> <span class="prompt-reviews__stars">&#9733;&#9733;&#9733;&#9733;&#9734;</span></h3>
-                <div class="prompt-reviews__list" itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
-                    <meta itemprop="ratingValue" content="4.3">
-                    <meta itemprop="reviewCount" content="3">
-                    <article class="prompt-reviews__item" itemprop="review" itemscope itemtype="http://schema.org/Review" aria-label="user-review">
-                        <div itemprop="reviewRating" itemscope itemtype="http://schema.org/Rating">
-                            <meta itemprop="ratingValue" content="4">
-                        </div>
-                        <p class="prompt-reviews__item-stars">&#9733;&#9733;&#9733;&#9733;&#9734;</p>
-                        <p class="prompt-reviews__item-text" itemprop="reviewBody">High quality, easy to use. The only reason for 4 stars is that I had to run it twice to get the perfect coffee cup detail.</p>
-                    </article>
-                    <article class="prompt-reviews__item" itemprop="review" itemscope itemtype="http://schema.org/Review" aria-label="user-review">
-                        <div itemprop="reviewRating" itemscope itemtype="http://schema.org/Rating">
-                            <meta itemprop="ratingValue" content="5">
-                        </div>
-                        <p class="prompt-reviews__item-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
-                        <p class="prompt-reviews__item-text" itemprop="reviewBody">My new favorite! This is exactly the type of detailed prompt I look for. The interior design elements, especially the leather chairs and throw blanket, are beautifully rendered.</p>
-                    </article>
-                    <article class="prompt-reviews__item" itemprop="review" itemscope itemtype="http://schema.org/Review" aria-label="user-review">
-                        <div itemprop="reviewRating" itemscope itemtype="http://schema.org/Rating">
-                            <meta itemprop="ratingValue" content="5">
-                        </div>
-                        <p class="prompt-reviews__item-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
-                        <p class="prompt-reviews__item-text" itemprop="reviewBody">Amazing atmosphere! I used this prompt for a background in a short story, and the details on the fireplace and lighting were incredible. It worked perfectly right out of the box. Highly recommend for any cozy scene</p>
-                    </article>
-                </div>
+                <h3 id="reviews" class="prompt-reviews__title">
+                    User reviews 
+                    <span class="prompt-reviews__rating" id="review-avg-rating">0.0</span> 
+                    <span class="prompt-reviews__stars" id="review-stars">☆☆☆☆☆</span>
+                </h3>
+                
+                <div class="prompt-reviews__list" id="reviews-list">
+                    </div>
             </section>
             
             <section class="popular-prompts-section" aria-labelledby="popular">
                 <div class="prompts-group">
                     <div class="prompts-group__header">
                         <h2 id="popular">Most popular prompts this month</h2>
-                        <p><a href="/catalog">See more ></a></p>
+                        <p><a href="/list">See more ></a></p>
                     </div>
-                    <div class="catalog-grid catalog-grid--popular">
-                        <article class="product-card">
-                            <a href="/prompt" class="product-card__link">
-                                <img src="Pictures\image 5.png" alt="Dark Forest" class="product-card__image">
-                            </a>
-                            <div class="product-card__overlay">
-                                <div class="product-card__info-row">
-                                    <p class="product-card__price">$6.49</p>
-                                    <p class="product-card__rating">&#9733;&#9733;&#9733;&#9733;&#9734;</p>
-                                </div>
-                                <p class="product-card__tags"><small>#nature #forest</small></p>
-                            </div>
-                        </article>
-                        <article class="product-card">
-                            <a href="/prompt" class="product-card__link">
-                                <img src="Pictures\image 4.png" alt="Twilight Muse" class="product-card__image">
-                            </a>
-                            <div class="product-card__overlay">
-                                <div class="product-card__info-row">
-                                    <p class="product-card__price">$4.49</p>
-                                    <p class="product-card__rating">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
-                                </div>
-                                <p class="product-card__tags"><small>#portrait #sculpture</small></p>
-                            </div>
-                        </article>
-                        <article class="product-card">
-                            <a href="/prompt" class="product-card__link">
-                                <img src="Pictures\image 3.png" alt="Plumpy Cat" class="product-card__image">
-                            </a>
-                            <div class="product-card__overlay">
-                                <div class="product-card__info-row">
-                                    <p class="product-card__price">$12.99</p>
-                                    <p class="product-card__rating">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
-                                </div>
-                                <p class="product-card__tags"><small>#animals #cartoon</small></p>
-                            </div>
-                        </article>
-                    </div>
+                    
+                    <div class="catalog-grid catalog-grid--popular" id="popular-prompts-grid">
+                        </div>
                 </div>
             </section>
+
         </div>
     </div>
+
+    <script type="module" src="/js/detail.js"></script>
 </main>
-    <%- include('partials/footer') %>
+<%- include('partials/footer') %>

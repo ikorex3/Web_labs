@@ -46,77 +46,18 @@
         
         <section class="popular-prompts-section" aria-labelledby="popular">
             <div class="prompts-group">
-            <div class="prompts-group__header">
-            <h2 id="popular">Most popular prompts this month</h2>
-            <p><a href="/catalog">See more ></a></p>
+                <div class="prompts-group__header">
+                    <h2 id="popular">Most popular prompts this month</h2>
+                    <p><a href="/catalog">See more ></a></p>
+                </div>
+                
+                <div class="catalog-grid" id="home-popular-grid">
+                    <div class="loading-spinner">Loading...</div>
+                </div>
             </div>
-            <div class="catalog-grid">
-                
-                <article class="product-card"> 
-                    <a href="/prompt" class="product-card__link">
-                        <img src="Pictures\image 2.png" alt="Cozy Autumn Lounge" class="product-card__image">
-                    </a>
-                    <div class="product-card__overlay">
-                        <div class="product-card__info-row">
-                            <p class="product-card__price">$7.99</p> 
-                            <p class="product-card__rating">&#9733;&#9733;&#9733;&#9733;&#9734;</p> 
-                        </div>
-                        <p class="product-card__tags"><small>#design #furniture</small></p>
-                    </div>
-                </article>
-                
-                <article class="product-card">
-                    <a href="/prompt" class="product-card__link">
-                        <img src="Pictures\image 4.png" alt="Twilight Muse" class="product-card__image">
-                    </a>
-                    <div class="product-card__overlay">
-                        <div class="product-card__info-row">
-                            <p class="product-card__price">$4.49</p> 
-                            <p class="product-card__rating">&#9733;&#9733;&#9733;&#9733;&#9734;</p>   
-                        </div>
-                        <p class="product-card__tags"><small>#portrait #sculpture</small></p>
-                    </div>
-                </article>
-                
-                <article class="product-card">
-                    <a href="/prompt" class="product-card__link">
-                        <img src="Pictures\image 3.png" alt="Plumpy Cat" class="product-card__image">
-                    </a>
-                    <div class="product-card__overlay">
-                        <div class="product-card__info-row">
-                            <p class="product-card__price">$12.99</p>
-                            <p class="product-card__rating">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
-                        </div>
-                        <p class="product-card__tags"><small>#animals #cartoon</small></p>
-                    </div>
-                </article>
-                
-                <article class="product-card">
-                    <a href="/prompt" class="product-card__link">
-                        <img src="Pictures\image 5.png" alt="Dark Forest" class="product-card__image">
-                    </a>
-                    <div class="product-card__overlay">
-                        <div class="product-card__info-row">
-                            <p class="product-card__price">$6.49</p>
-                            <p class="product-card__rating">&#9733;&#9733;&#9733;&#9733;&#9734;</p>
-                        </div>
-                        <p class="product-card__tags"><small>#nature #forest</small></p>
-                    </div>
-                </article>
-                
-                <article class="product-card">
-                    <a href="/prompt" class="product-card__link">
-                        <img src="Pictures\image 6.png" alt="Futuristic City" class="product-card__image">
-                    </a>
-                    <div class="product-card__overlay">
-                        <div class="product-card__info-row">
-                            <p class="product-card__price">$2.49</p>
-                            <p class="product-card__rating">&#9733;&#9733;&#9733;&#9733;&#9734;</p>
-                        </div>
-                        <p class="product-card__tags"><small>#cityscape #future</small></p>
-                    </div>
-                </article>
-                
-            </div> </div></section>
-    </div> </main>
+        </section>
+    </div> 
+    
+    <script type="module" src="/js/home.js"></script>
+</main>
 <%- include('partials/footer') %>

@@ -1,0 +1,309 @@
+{
+  "prompts": [
+    {
+      "id": 1,
+      "title": "Cozy Autumn Lounge",
+      "price": 7.99,
+      "rating": 4,
+      "reviews": 24,
+      "image": "Pictures/image 2.png",
+      "imageLarge": "Pictures/image 2 large.png",
+      "tags": ["design", "furniture"],
+      "aiModel": "DALL-E",
+      "type": "Image",
+      "description": "This prompt is engineered to generate a cinematic, photorealistic image of a warm, inviting lounge area. It perfectly balances indoor comfort with the beauty of the outdoors. A spacious, high-ceilinged room with massive, industrial-style window panels overlooking a foggy, vibrant autumn forest.",
+      "reviewsList": [
+        {
+          "rating": 4,
+          "text": "High quality, easy to use. The only reason for 4 stars is that I had to run it twice to get the perfect coffee cup detail."
+        },
+        {
+          "rating": 5,
+          "text": "My new favorite! This is exactly the type of detailed prompt I look for. The interior design elements, especially the leather chairs and throw blanket, are beautifully rendered."
+        },
+        {
+          "rating": 5,
+          "text": "Amazing atmosphere! I used this prompt for a background in a short story, and the details on the fireplace and lighting were incredible. It worked perfectly right out of the box. Highly recommend for any cozy scene"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Ancient statue",
+      "price": 5.99,
+      "rating": 5,
+      "reviews": 18,
+      "image": "Pictures/image 8.png",
+      "tags": ["mythology", "sculpture"],
+      "aiModel": "Midjourney",
+      "type": "Image"
+    },
+    {
+      "id": 3,
+      "title": "Cyberpunk city",
+      "price": 2.99,
+      "rating": 4,
+      "reviews": 32,
+      "image": "Pictures/image 9.png",
+      "tags": ["cyberpunk", "cityscape"],
+      "aiModel": "DALL-E",
+      "type": "Image"
+    },
+    {
+      "id": 4,
+      "title": "Dragon",
+      "price": 7.49,
+      "rating": 4,
+      "reviews": 15,
+      "image": "Pictures/image 15.png",
+      "tags": ["animals", "mythology"],
+      "aiModel": "Midjourney",
+      "type": "Image"
+    },
+    {
+      "id": 5,
+      "title": "Cybernetic cat",
+      "price": 3.99,
+      "rating": 5,
+      "reviews": 28,
+      "image": "Pictures/image 17.png",
+      "tags": ["animals", "cyberpunk"],
+      "aiModel": "DALL-E",
+      "type": "Image"
+    },
+    {
+      "id": 6,
+      "title": "Monster couch",
+      "price": 9.99,
+      "rating": 3,
+      "reviews": 12,
+      "image": "Pictures/image 18.png",
+      "tags": ["cartoon", "furniture"],
+      "aiModel": "Midjourney",
+      "type": "Image"
+    },
+    {
+      "id": 7,
+      "title": "Forest ghost",
+      "price": 2.49,
+      "rating": 2,
+      "reviews": 8,
+      "image": "Pictures/image 19.png",
+      "tags": ["forest", "mythology"],
+      "aiModel": "DALL-E",
+      "type": "Image"
+    },
+    {
+      "id": 8,
+      "title": "Cyberpunk owl",
+      "price": 7.49,
+      "rating": 4,
+      "reviews": 21,
+      "image": "Pictures/image 20.png",
+      "tags": ["animals", "cyberpunk"],
+      "aiModel": "Midjourney",
+      "type": "Image"
+    },
+    {
+      "id": 9,
+      "title": "Mythology throne",
+      "price": 6.49,
+      "rating": 4,
+      "reviews": 16,
+      "image": "Pictures/image 21.png",
+      "tags": ["furniture", "mythology"],
+      "aiModel": "DALL-E",
+      "type": "Image"
+    },
+    {
+      "id": 10,
+      "title": "Cute design",
+      "price": 10.49,
+      "rating": 4,
+      "reviews": 19,
+      "image": "Pictures/image 22.png",
+      "tags": ["design", "cute"],
+      "aiModel": "Midjourney",
+      "type": "Image"
+    },
+    {
+      "id": 11,
+      "title": "Cyberpunk dragon",
+      "price": 19.99,
+      "rating": 4,
+      "reviews": 45,
+      "image": "Pictures/image 23.png",
+      "tags": ["mythology", "cyberpunk"],
+      "aiModel": "DALL-E",
+      "type": "Image"
+    },
+    {
+      "id": 12,
+      "title": "Twilight Muse",
+      "price": 4.49,
+      "rating": 5,
+      "reviews": 27,
+      "image": "Pictures/image 4.png",
+      "imageLarge": "Pictures/image 4 large.png",
+      "tags": ["portrait", "sculpture"],
+      "aiModel": "Midjourney",
+      "type": "Image"
+    },
+    {
+      "id": 13,
+      "title": "Plumpy Cat",
+      "price": 12.99,
+      "rating": 5,
+      "reviews": 38,
+      "image": "Pictures/image 3.png",
+      "tags": ["animals", "cartoon"],
+      "aiModel": "DALL-E",
+      "type": "Image"
+    },
+    {
+      "id": 14,
+      "title": "Dark Forest",
+      "price": 6.49,
+      "rating": 4,
+      "reviews": 22,
+      "image": "Pictures/image 5.png",
+      "tags": ["nature", "forest"],
+      "aiModel": "Midjourney",
+      "type": "Image"
+    },
+    {
+      "id": 15,
+      "title": "Futuristic City",
+      "price": 2.49,
+      "rating": 4,
+      "reviews": 14,
+      "image": "Pictures/image 6.png",
+      "tags": ["cityscape", "future"],
+      "aiModel": "DALL-E",
+      "type": "Image"
+    },
+    {
+      "id": 16,
+      "title": "Cyberpunk city",
+      "price": 2.99,
+      "rating": 4,
+      "reviews": 32,
+      "image": "Pictures/image 9.png",
+      "tags": ["cyberpunk", "cityscape"],
+      "aiModel": "DALL-E",
+      "type": "Image"
+    },
+    {
+      "id": 17,
+      "title": "Cyberpunk city",
+      "price": 2.99,
+      "rating": 4,
+      "reviews": 32,
+      "image": "Pictures/image 9.png",
+      "tags": ["cyberpunk", "cityscape"],
+      "aiModel": "DALL-E",
+      "type": "Image"
+    },
+    {
+      "id": 18,
+      "title": "Cyberpunk city",
+      "price": 2.99,
+      "rating": 4,
+      "reviews": 32,
+      "image": "Pictures/image 9.png",
+      "tags": ["cyberpunk", "cityscape"],
+      "aiModel": "DALL-E",
+      "type": "Image"
+    },
+    {
+      "id": 19,
+      "title": "Cyberpunk city",
+      "price": 2.99,
+      "rating": 4,
+      "reviews": 32,
+      "image": "Pictures/image 9.png",
+      "tags": ["cyberpunk", "cityscape"],
+      "aiModel": "DALL-E",
+      "type": "Image"
+    },
+    {
+      "id": 20,
+      "title": "Cyberpunk city",
+      "price": 2.99,
+      "rating": 4,
+      "reviews": 32,
+      "image": "Pictures/image 9.png",
+      "tags": ["cyberpunk", "cityscape"],
+      "aiModel": "DALL-E",
+      "type": "Image"
+    },
+    {
+      "id": 21,
+      "title": "Cyberpunk city",
+      "price": 2.99,
+      "rating": 4,
+      "reviews": 32,
+      "image": "Pictures/image 9.png",
+      "tags": ["cyberpunk", "cityscape"],
+      "aiModel": "DALL-E",
+      "type": "Image"
+    },
+    {
+      "id": 22,
+      "title": "Cyberpunk city",
+      "price": 2.99,
+      "rating": 4,
+      "reviews": 32,
+      "image": "Pictures/image 9.png",
+      "tags": ["cyberpunk", "cityscape"],
+      "aiModel": "DALL-E",
+      "type": "Image"
+    },
+    {
+      "id": 23,
+      "title": "Cyberpunk city",
+      "price": 2.99,
+      "rating": 4,
+      "reviews": 32,
+      "image": "Pictures/image 9.png",
+      "tags": ["cyberpunk", "cityscape"],
+      "aiModel": "DALL-E",
+      "type": "Image"
+    },
+    {
+      "id": 24,
+      "title": "Cyberpunk city",
+      "price": 2.99,
+      "rating": 4,
+      "reviews": 32,
+      "image": "Pictures/image 9.png",
+      "tags": ["cyberpunk", "cityscape"],
+      "aiModel": "DALL-E",
+      "type": "Image"
+    },
+    {
+      "id": 25,
+      "title": "Cyberpunk city",
+      "price": 2.99,
+      "rating": 4,
+      "reviews": 32,
+      "image": "Pictures/image 9.png",
+      "tags": ["cyberpunk", "cityscape"],
+      "aiModel": "DALL-E",
+      "type": "Image"
+    }
+  ],
+  "cart": [
+    {
+      "id": 1,
+      "promptId": 1,
+      "quantity": 1
+    },
+    {
+      "id": 2,
+      "promptId": 12,
+      "quantity": 1
+    }
+  ]
+}
+
